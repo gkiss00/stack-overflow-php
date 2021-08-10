@@ -1,0 +1,806 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding : 0;
+    margin : 0;
+    border : 0;
+}
+
+html a:hover, html input[type="button"]:hover, html button:hover, html input[type="submit"] {
+    cursor: pointer;
+}
+
+main {
+    padding-right : 2%;
+    padding-left : 2%;
+}
+
+body {
+    display : flex;
+    flex-direction: column;
+    padding : 0;
+    margin : 0;
+    border : 0;
+}
+
+a {
+    color : blue;
+}
+
+#main_error {
+    text-align : center;
+    background-color: lightgrey;
+    border : 1px solid blue;
+    border-radius : 3px;
+    padding : 2%;
+    margin : 10% 25% 25% 25%;
+}
+
+#main_error img {
+    width : 30%;
+    float : left;
+}
+
+#main_error a {
+    background-color: royalblue;
+    color: white;
+    padding: 1%;
+    margin: 1.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+/* nav bar debut*/
+
+header {
+    display : flex;
+    overflow: hidden;
+    background-color: royalblue;
+    padding : 5px;
+    margin : 0;
+    border : 0;
+}
+
+header a {
+    display : flex;
+    color : white;
+    text-align: center;
+    padding : 14px 5px;
+    text-decoration: none;
+}
+
+.nav_bar {
+    width : 100%;
+    display : flex;
+    justify-content : space-between;
+}
+.nav_main {
+    display : flex;
+    font-size : 14px;
+    padding-top : 3px;
+}
+/* index debut */
+
+#title {
+    font-size: 18px;
+    font-weight : bold;
+}
+
+.main {
+    display : flex;
+    flex-direction : column;
+    padding : 5px 0 0 0;
+    text-align : center;
+}
+
+.nav_questions {
+    width : 100%;
+    display : flex;
+    justify-content : space-between;
+    font-weight: bold;
+}
+
+#lien, #js_links {
+    display : flex;
+    align-items : center;
+}
+
+.nav_questions a, .nav_questions p {
+    padding-right : 8px;
+}
+
+p.active {
+    padding-right : 8px;
+    background-color: white;
+    overflow : hidden;
+}
+
+.nav_questions a, .nav_questions p {
+    text-decoration: none;
+    font-size : 15px;
+    text-align : center;
+}
+
+#shearch {
+    display : flex;
+}
+
+#search input[type=text]{
+    box-sizing: border-box;
+    border: 1px solid grey;
+    padding: 13px 20px 13px 40px;
+    border-top-left-radius:  5px; 
+    border-bottom-left-radius: 5px;
+}
+
+#search button{
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 11px 5px 13px 5px;
+    margin: 0 0 0 -4px;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;
+}
+
+.questions, #js_questions{
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 4px;
+    overflow : visible;
+}
+
+.show_questions {
+    border-bottom : 1px solid grey;
+    padding : 0 1% 0 1%;    
+}
+
+.index_pages {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin: 0;
+}
+
+.index_pages a, .index_pages p{
+    clear: right;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px grey;
+    background-color: lightgrey;
+    margin: 0;
+    padding: 5px;
+}
+
+.index_pages a {
+    text-decoration: none;
+    background-color: royalblue;
+    color: white;
+}
+
+.show_questions p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.show_questions .askedby {
+    font-style : italic;
+}
+
+.show_questions .askedby a{
+    font-style : normal;
+}
+
+.show_questions p a{
+    margin-left: 2px;
+}
+
+.show_questions .title {
+    font-weight: bold;
+}
+
+/* ask debut */
+
+#askquestion { 
+    margin : 2%;
+}
+
+#askquestion input[type=text], #askquestion textarea{
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 100%;
+}
+
+#askquestion p {
+    margin: 0;
+}
+
+#askquestion input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 0.5%;
+    margin: 0.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+.check_tags {
+    display: flex;
+    align-items : baseline;
+}
+
+/* edit */
+
+#edit { 
+    margin : 2%;
+}
+
+#edit textarea{
+    margin: 0;
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 100%;
+}
+
+#edit p {
+    margin: 0;
+}
+
+#edit button[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 0.5%;
+    margin: 0.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+/* login */
+#signin_body {
+    padding-bottom : 1px;
+}
+
+#connect {
+    margin-top: 10%;
+    height : 85%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction: column;
+}
+
+#connect h1 {
+    text-align : center;
+    padding : 0 5% 5% 5%;
+}
+
+#se_connecter {
+    padding : 1%;
+    border : solid 2px royalblue;
+    border-radius : 10px;
+}
+
+#connect input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 1.5%;
+    margin: 1.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+    float: right;
+}
+
+#connect input[type=text], #connect input[type=password] {
+    border-radius: 3px;
+}
+
+/* signup */
+
+#signup_body {
+    padding-bottom : 1px;
+}
+
+#signup {
+    margin-top: 10%;
+    height : 85%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction:column;
+}
+
+#signup h1 {
+    text-align : center;
+    padding : 0 5% 5% 5%;
+}
+
+#s_inscrire {
+    padding : 1%;
+    border : solid 2px royalblue;
+    border-radius : 10px;
+}
+
+#signup input[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 1.5%;
+    margin: 1.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+    float: right;
+}
+
+#signup input[type=text], #signup input[type=password] {
+    border-radius: 3px;
+}
+
+/* delete */
+
+#delete {
+    height : 400px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#supprimer {
+    padding : 0 10px 10px 10px;
+    border : solid 2px royalblue;
+    border-radius : 10px;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+#supprimer #image{
+    margin: 0;
+    font-size: 70px;
+}
+
+#supprimer h1 {
+    color: red;
+}
+
+#button_del {
+    display :flex;
+    justify-content : space-around;
+    width: 200px;
+}
+
+#supprimer button, #supprimer form{
+    background-color: royalblue;
+    padding: 3.5%;
+    margin: 1.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+#supprimer button a, #supprimer form button{
+    text-decoration : none;
+    color: white;
+    border: 0;
+}
+#supprimer form button {
+    cursor: pointer;
+}
+
+/* show */
+
+h2 {
+    font-weight: normal;
+}
+
+.show {
+    padding: 0.5%;
+    margin: 0.5% 0 0 0;
+}
+
+.show .votes, .show .votes_js{
+    float : left;
+    padding: 0 0 0 1%;
+}
+
+#mainQuestion {
+    padding: 0 0 0 6%;
+}
+
+.answers {
+    border-bottom: solid 1px grey;
+    margin: 0 0 2% 0;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.answers .votes, .answers .votes_js{
+    box-sizing: border-box;
+    float:left;
+    padding: 0 0 0 1%;
+    vertical-align: top;            
+}
+
+#voir {
+    display : flex;
+    flex-direction : column;
+}
+
+.show {
+    display : flex;
+    flex-direction : column;
+}
+
+.question_cadre {
+    border: solid 2px lightgrey;
+    border-radius: 3px;
+    padding: 1.5%;
+}
+
+#entete {
+    padding-left : 5px;
+    display : flex;
+    flex-direction : column;
+}
+#entete h2{
+    font-weight: bold;
+}
+
+#corp_and_vote {
+    border-top:solid 1px grey;
+    padding-top: 1%;
+    display : flex;
+}
+
+#mainQuestion {
+    width : 80%;
+    margin-left : 20px;
+    padding : 0;
+    margin-top : 0;
+}
+
+#nb_answers {
+    padding-left: 5px;
+}
+
+.all_answers {
+    border: solid 2px lightgrey;
+    border-radius:3px;
+    padding : 1.5%;
+}
+
+.votes, .votes_js {
+    display : flex;
+    flex-direction : column;
+    margin-top : 10px;
+}
+
+.votes button, .votes_js button{
+    border : none;
+    background-color : white;
+}
+
+.ans_and_vote {
+    display : flex;
+    flex-direction : row-reverse;
+    justify-content : flex-end;
+}
+
+.answers_body {
+    margin-left : 20px;
+}
+
+.answers_body blockquote {
+    background-color : lightgrey;
+    border-left : solid 2px grey;
+    border-radius : 1px
+}
+.author {
+    display : flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+    font-style: italic;
+}
+
+.author button{
+    background-color: white;
+    border:hidden;
+    color : blue;
+}
+
+.author a {
+    padding-right: 10px;
+}
+
+.acceptedAnswer {
+    display:flex;
+    align-items: baseline;
+}
+
+.linklink {
+    display : flex;
+    padding:1%;
+}
+
+.linklink a, form{
+   padding-right : 10px;
+}
+
+.linklink button {
+    border: none;
+    background: none;
+    padding: 0;
+    color: blue;
+}
+
+.reply_form textarea{
+    margin: 0;
+    border: 1px solid grey;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.reply_from p {
+    margin: 0;
+}
+
+.reply_form button[type=submit] {
+    background-color: royalblue;
+    color: white;
+    padding: 0.5%;
+    margin: 0.5% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+.accepted_buttons {
+    display:flex;
+    vertical-align: center;
+}
+
+code {
+    background: lightgrey;
+}
+
+.tagname {
+    display : inline;
+    padding: 2px;
+    text-decoration: none;
+    color : white;
+    border-radius : 2px;
+    background-color : royalblue;
+}
+
+.removetag {
+    display : inline;
+    padding: 2px 5px 2px 0px;
+    text-decoration : none;
+    margin : 0px;
+}
+
+.tags form button, .tags form select {
+    background-color: royalblue;
+    color: white;
+    padding: 2px;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+p a {
+    text-decoration : none;
+    padding: 2px;
+}
+
+.comments {
+    display: flex;
+    align-items: baseline;
+    font-size: 12px;
+}
+
+.comments p {
+    margin: 0;
+    text-indent: 120px;
+}
+
+.comments p a {
+    text-decoration: none;
+    color: blue;
+}
+
+.comments a, .comments input {
+    text-decoration : none;
+    color : grey;
+    margin : 3px;
+    cursor : pointer;
+    border : hidden;
+    background-color: white;
+    padding: 0;
+}
+
+.comment_add{
+    text-decoration: none;
+    color: grey;
+    border: hidden;
+    background-color: white;
+}
+
+.comment_add input {
+    text-decoration: none;
+    color: grey;
+    border: hidden;
+    background-color: white;
+
+}
+
+.comments form {
+    padding: 0;
+    margin-left: 8px;
+}
+
+.comments input {
+    font-size: 11.3px;
+}
+
+.comment_add {
+    margin-top : 15px;
+}
+
+/* tag list */
+#tagName {
+    margin: 2%;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.names {
+    font-weight: bold;
+}
+
+.taglist {
+    margin : 2%;
+}
+
+.taglist form input {
+    font-size: 12px;
+    color: royalblue;
+}
+
+.taglist table, .taglist td {
+    border: 1px solid darkgrey;
+}
+
+.taglist td, .taglist th {
+    width: 25%;
+}
+
+.taglist thead {
+    background-color: royalblue;
+    color: white;
+}
+
+.taglist button a, .taglist button {
+    color:black;
+    cursor: pointer;
+    border : hidden;
+    background-color : white;
+    font-weight: normal;
+}
+
+.taglist input{
+    border-radius: 2px;
+    text-decoration: none;
+    border : solid 1px grey;
+    padding : 2px;
+}
+
+#tag_flex {
+    display:flex;
+    margin-left: 2%;
+}
+
+#newTag {
+    padding-top: 10px;
+}
+
+#newTag form input{
+    padding: 4px;
+    border-radius: 2px;
+    text-decoration: none;
+    border : solid 1px royalblue;
+}
+#newTag form input::placeholder{
+    color: darkgrey;
+}
+
+#newTag form button {
+    border : 0;
+    background-color: white;
+    color: black;
+    font-size: larger;
+}
+
+/* comments */
+
+.add_edit_comments input[type=submit], .comment_btn {
+    background-color: royalblue;
+    color: white;
+    padding: 0.5%;
+    margin: 1% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+.cancel_btn {
+    background-color: darkred;
+    color: white;
+    padding: 0.5%;
+    margin: 1% 0 0 0;
+    border : 1px solid grey;
+    border-radius: 4px;
+}
+
+label.error {
+    color: darkred;
+    font-size: 8pt;
+    padding-left: .5em;
+    font-weight: bold;
+}
+ 
+label.error::before { 
+    content: "\A"; 
+    white-space: pre; 
+} 
+
+/* stats */
+
+#details_show {
+    width: 60%;
+    margin-left: 5%;
+    margin-right : 35%;
+    margin-bottom: 3%;
+}
+
+#details_show a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#details_show table, #details_show td {
+    border: 1px solid darkgrey;
+}
+
+#details_show td, #details_show th {
+    width: 20%;
+}
+
+#details_show thead {
+    background-color: royalblue;
+    color: white;
+}
+
+#chart {
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 40%;
+}
+
+#period_choice {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+#period_choice input, #period_choice select {
+    margin-left : 1%;
+    margin-top: 1%;
+    margin-bottom : 1%;
+    border : solid darkgrey 1px;
+    border-radius: 3px;
+}
+
+#period_choice h2{
+    font-weight: bold;
+}
